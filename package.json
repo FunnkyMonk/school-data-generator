@@ -1,0 +1,23 @@
+{
+  "name": "school-data-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FunnkyMonk/school-data-generator.git"
+  },
+  "author": "Renato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FunnkyMonk/school-data-generator/issues"
+  },
+  "homepage": "https://github.com/FunnkyMonk/school-data-generator#readme",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "json2csv": "^4.5.4"
+  }
+}
