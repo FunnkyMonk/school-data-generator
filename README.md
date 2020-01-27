@@ -7,9 +7,8 @@ This dummy generator depends on: [faker](https://www.npmjs.com/package/faker) an
 
 To use from the cli, just execute:
 
-    ```javascript
     node generator_file <number of registers>  //It will print the info in the console
-    ```
+
 
 To export a file with the csv-data just run:
     
