@@ -18,6 +18,7 @@
   "homepage": "https://github.com/FunnkyMonk/school-data-generator#readme",
   "dependencies": {
     "faker": "^4.1.0",
-    "json2csv": "^4.5.4"
+    "json2csv": "^4.5.4",
+    "moment": "^2.24.0"
   }
 }

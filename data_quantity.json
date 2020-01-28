@@ -1,0 +1,7 @@
+{
+    "facility": 50,
+    "professor": 100,
+    "class": 200,
+    "student": 500,
+    "admin": 80
+}
