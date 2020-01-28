@@ -11,7 +11,7 @@ To use from the cli, just execute:
 
 The "school_name" and "semester" parameters are going to join and generate the seed to define the "randomness" so, same parameters will return same data.
 
-The quantity of registers can be controled through the file "data_quantity.json" the number represents the rows of it's corresponding entity:
+The quantity of registers can be controlled through the file "data_quantity.json" the number represents the rows of it's corresponding entity:
 
 
     {   
