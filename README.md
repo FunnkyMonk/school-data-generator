@@ -35,7 +35,7 @@ It will create the followng csv's:
 
 >> Warning: 
 * At this point colissions between ids on different files can occur, but it should be minimal.
-* The seed is defined by the sum of the ASCII-values of the received parameters so: "test 0"  will produce the same output as "0 sett" for example...
+* The seed is defined by the sum of the ASCII-values of the received parameters so for example the parameters: "test 0"  will produce the same output as executing with: "0 sett"...
 
 
 
