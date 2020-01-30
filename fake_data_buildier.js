@@ -72,11 +72,11 @@ const Buildier = class {
 
         const order_list_ascendent = l => l.sort((a,b) => a > b ? 1 : -1);
 
-        const get_array_with_random_values = (size) => {
+        const get_array_with_random_values = (max_value) => {
             
             let array = Array.from({
                 length: MAX_SCHEDULES_PER_WEEK
-            }, () => faker.random.number( size ));
+            }, () => faker.random.number(max_value));
             
             array = new Set(array)
             
