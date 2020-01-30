@@ -18,9 +18,9 @@ const [ school_name = 'test', semester = '0' ] = process.argv.slice(2)
 const generate_seed = (str_tmp) => {
     let ascii_sum = 0;
     str_tmp.split("").forEach((char) => {
-        ascii_sum += parseInt(char.charCodeAt())
+        ascii_sum += parseInt(char.charCodeAt());
     });
-    return ascii_sum
+    return ascii_sum;
 };
 
 const dataBuildier = new Buildier({ seed: generate_seed(school_name + semester) })
@@ -94,11 +94,11 @@ function write_file(entity, data, fields){
     });
 }
 
-write_file('admin', admin_data, ADMIN_FIELDS)
-write_file('facility', facilities_data, FACILITIES_FIELDS)
-write_file('professor', professor_data, PROFESSOR_FIELDS)
-write_file('student', student_data, STUDENT_FIELDS)
-write_file('class', class_data, CLASS_FIELDS)
+write_file('admin', admin_data, ADMIN_FIELDS);
+write_file('facility', facilities_data, FACILITIES_FIELDS);
+write_file('professor', professor_data, PROFESSOR_FIELDS);
+write_file('student', student_data, STUDENT_FIELDS);
+write_file('class', class_data, CLASS_FIELDS);
 
 
 

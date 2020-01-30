@@ -33,7 +33,9 @@ It will create the followng csv's:
     schoolTest_1_student.csv
 
 
->> Warning: At this point colissions between ids on different files can occur, but it should be minimal.
+>> Warning: 
+* At this point colissions between ids on different files can occur, but it should be minimal.
+* The seed is defined by the sum of the ASCII-values of the received parameters so: "test 0"  will produce the same output as "0 sett" for example...
 
 
 
