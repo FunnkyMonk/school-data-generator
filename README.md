@@ -34,9 +34,11 @@ It will create the followng csv's:
 
 
 >> UPDATE 13/feb/2020
+    
     * The schedulle will be defined randomly from Monday to Friday on a hour-range from 8:00 to 20:00 hrs
 
 >> Warning: 
+    
     * At this point colissions between ids on different files can occur, but it should be minimal.
 
     * The seed is defined by the sum of the ASCII-values of the received parameters so for example the parameters: "test 0"  will produce the same output as executing with: "0 sett"...
