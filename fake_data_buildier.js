@@ -65,29 +65,42 @@ const Buildier = class {
     }
 
     getRandomScheduleStr(){
-
+        
         const MAX_SCHEDULES_PER_WEEK = 5;
-        const CLASS_DURATION = 2; // hours
-        const DAY_HOURS = 24;
+
+        // vlaues are on hours:
+        const CLASS_DURATION = 2; 
+        const MIN_HOUR_RANGE_FOR_CLASS = 8; 
+        const MAX_HOUR_RANGE_FOR_CLASS = 20; 
+
+        // Monday = 1, Tuesday = 2 and so on... 
+        const START_DAY_OF_WEEK = 1;
+        const END_DAY_OF_WEEK = 5;
 
         const order_list_ascendent = l => l.sort((a,b) => a > b ? 1 : -1);
 
-        const get_array_with_random_values = (max_value) => {
+        const get_array_with_random_values = () => {
             
             let array = Array.from({
                 length: MAX_SCHEDULES_PER_WEEK
-            }, () => faker.random.number(max_value));
+            }, () => faker.random.number({
+                'min': MIN_HOUR_RANGE_FOR_CLASS,
+                'max': MAX_HOUR_RANGE_FOR_CLASS - CLASS_DURATION
+            }));
             
             array = new Set(array);
             
             return order_list_ascendent([...array]);
         };
 
-        const start_class_hours = get_array_with_random_values(DAY_HOURS - CLASS_DURATION);
+        const start_class_hours = get_array_with_random_values();
         const days_of_week = new Set();
 
         while(days_of_week.size < start_class_hours.length){
-            days_of_week.add(faker.random.number(start_class_hours.length));
+            days_of_week.add(faker.random.number({
+                'min': START_DAY_OF_WEEK, 
+                'max': END_DAY_OF_WEEK  
+            }));
         }
 
         const days_of_week_ordered = order_list_ascendent([...days_of_week]);
@@ -113,7 +126,6 @@ const Buildier = class {
         const CLASS_DURATION_DAYS = 30;
 
         const { fields, faker_params, quantity, custom_fields, dependencies } = params;
-
         const { professor_data, facilities_data, student_data } = dependencies;
 
         const  plain_fields = fields.filter(field => !custom_fields.includes(field));
